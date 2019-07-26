@@ -1,0 +1,16 @@
+{
+  "name": "ikb1-arduino",
+  "title" : "iKB-1 Arduino",
+  "keywords": "iKB-1",
+  "description": "ไลบารี่สำหรับบอร์ด iKB-1 สำหรับแพลตฟอร์ม Arduino",
+  "homepage": "https://www.inex.co.th/",
+  "license": "MIT",
+  "git": "https://github.com/maxpromer/ikb-1-ardunio",
+  "author": "INEX",
+  "email": "tech@inex.co.th",
+  "url": "https://www.inex.co.th/",
+  "version": "1.0.0",
+  "board" : "",
+  "platform": ["arduino-esp32"],
+  "image" : "/static/cover.png"
+}
