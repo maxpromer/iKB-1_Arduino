@@ -7,6 +7,7 @@
 
 iKB_1::iKB_1(TwoWire *bus) { 
     wirebus = bus;
+	Serial = new iKB_1_UART(bus);
 }
 
 void iKB_1::begin() {
@@ -40,8 +41,9 @@ bool iKB_1::send(uint8_t command, uint8_t parameter, int request_length) {
 	}
 
 	wirebus->requestFrom(IKB_1_ADDR, request_length);
-	for (int i=0;i<wirebus->available();i++) {
-		read_data[i] = wirebus->read();
+	int i=0;
+	while(wirebus->available()) {
+		read_data[i++] = wirebus->read();
 	}
 
 	return true;
@@ -56,8 +58,9 @@ bool iKB_1::send(uint8_t command, int request_length) {
 	}
 
 	wirebus->requestFrom(IKB_1_ADDR, request_length);
-	for (int i=0;i<wirebus->available();i++) {
-		read_data[i] = wirebus->read();
+	int i=0;
+	while(wirebus->available()) {
+		read_data[i++] = wirebus->read();
 	}
 
 	return true;

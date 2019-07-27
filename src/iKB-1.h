@@ -18,7 +18,6 @@ class iKB_1 {
 		bool send(uint8_t command, uint8_t parameter) ;
 		bool send(uint8_t command, uint8_t parameter, int request_length) ;
 		bool send(uint8_t command, int request_length) ;
-		int uart_read_from_iKB_1(uint8_t count) ;
 
 	public:
 		// constructor
@@ -35,7 +34,7 @@ class iKB_1 {
 		bool servo2(uint8_t ch, uint8_t dir, uint8_t speed) ;
 		
 		// Uart
-		iKB_1_UART Serial = iKB_1_UART(wirebus);
+		iKB_1_UART *Serial;
 		
 };
 
