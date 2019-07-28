@@ -10,7 +10,7 @@
  
 สำหรับโปรแกรม KBIDE
  1. ดาวน์โหลดไฟล์ปลั๊กอินที่ https://github.com/maxpromer/iKB-1_Arduino/releases
- 2. คลายไฟล์ .zip นำโฟลเดอร์ iKB-1_Arduino-x.x.x ไปไว้ใน <ไดร์ที่ติดตั้ง Windows>:\Users\Max\AppData\Local\Programs\kbide\plugins
+ 2. คลายไฟล์ .zip นำโฟลเดอร์ iKB-1_Arduino-x.x.x ไปไว้ใน [ไดร์ที่ติดตั้ง Windows]:\Users\Max\AppData\Local\Programs\kbide\plugins
  3. เปิดโปรแกรม KBIDE ขึ้นมา บล็อกจะอยู่ในเมนู Plugins
  
 ## บอร์ดที่รองรับ
