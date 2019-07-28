@@ -237,7 +237,7 @@ Blockly.Blocks['ikb1_motor_forward'] = {
 			"message0": "%1 Move Forward at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
@@ -263,7 +263,7 @@ Blockly.Blocks['ikb1_motor_backward'] = {
 			"message0": "%1 Move Backward at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 20,
 				"height": 16,
 				"alt": "*",
@@ -289,7 +289,7 @@ Blockly.Blocks['ikb1_motor_forward2'] = {
 			"message0": "%1 Move Forward left wheel at speed %2 %% and right wheel at speed %3 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
@@ -319,7 +319,7 @@ Blockly.Blocks['ikb1_motor_backward2'] = {
 			"message0": "%1 Move Backward left wheel at speed %2 %% and right wheel at speed %3 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
@@ -349,7 +349,7 @@ Blockly.Blocks['ikb1_motor_turn_left'] = {
 			"message0": "%1 Turn Left at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
@@ -375,7 +375,7 @@ Blockly.Blocks['ikb1_motor_turn_right'] = {
 			"message0": "%1 Turn Right at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
@@ -401,7 +401,7 @@ Blockly.Blocks['ikb1_motor_spin_left'] = {
 			"message0": "%1 Spin Left at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
@@ -427,7 +427,7 @@ Blockly.Blocks['ikb1_motor_spin_right'] = {
 			"message0": "%1 Spin Right at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
@@ -453,7 +453,7 @@ Blockly.Blocks['ikb1_motor_stop'] = {
 			"message0": "%1 Stop Moving",
 			"args0": [{
 				"type": "field_image",
-				"src": "https://a.lnwpic.com/4p6j61.png",
+				"src": "/static/wheel-icon.png",
 				"width": 18,
 				"height": 16,
 				"alt": "*",
