@@ -1,54 +1,67 @@
+Blockly.Blocks['ikb1_setup'] = {
+	init: function() {
+		this.appendDummyInput()
+			.appendField("iKB-1 Setup")
+		this.setInputsInline(true);
+		this.setPreviousStatement(true, null);
+		this.setNextStatement(true, null);
+		this.setColour(165);
+		this.setTooltip("setup iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
+	}
+};
+
 Blockly.Blocks['ikb1_digital_read'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.DIGTIAL_READ_PIN)
+			.appendField("digital read pin")
 			.appendField(new Blockly.FieldDropdown([["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"]]), "ch");
 		this.setOutput(true, ["Number", "Boolean"]);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_digital_write'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.DIGTIAL_WRITE_PIN)
+			.appendField("digital write pin")
 			.appendField(new Blockly.FieldDropdown([["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"]]), "ch");
 		this.appendValueInput("value")
 			.setCheck(["Number", "Boolean"])
-			.appendField(Blockly.Msg.IKB_1.TO);
+			.appendField("to");
 		this.setInputsInline(true);
 		this.setPreviousStatement(true, null);
 		this.setNextStatement(true, null);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_analog_read'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.ANALOG_READ_PIN)
+			.appendField("analog read pin")
 			.appendField(new Blockly.FieldDropdown([["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"]]), "ch");
 		this.setOutput(true, "Number");
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_motor'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SET_MOTOR)
+			.appendField("set motor")
 			.appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"]]), "ch")
-			.appendField(Blockly.Msg.IKB_1.DIRECTION)
-			.appendField(new Blockly.FieldDropdown([[Blockly.Msg.IKB_1.FORWARD,"1"], [Blockly.Msg.IKB_1.BACKWARD,"2"]]), "dir");
+			.appendField("direction")
+			.appendField(new Blockly.FieldDropdown([["Forward","1"], ["Backward", "2"]]), "dir");
 		this.appendValueInput("speed")
 			.setCheck("Number")
-			.appendField(Blockly.Msg.IKB_1.SPEED);
+			.appendField("speed");
 		this.appendDummyInput()
 			.appendField("%");
 		this.setInputsInline(true);
@@ -56,37 +69,37 @@ Blockly.Blocks['ikb1_motor'] = {
 		this.setNextStatement(true, null);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_servo'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SET_SERVO)
+			.appendField("set servo")
 			.appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"]]), "ch");
 		this.appendValueInput("angle")
 			.setCheck("Number")
-			.appendField(Blockly.Msg.IKB_1.DEGREE);
+			.appendField("degree");
 		this.setInputsInline(true);
 		this.setPreviousStatement(true, null);
 		this.setNextStatement(true, null);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_servo2'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SET_SERVO2)
+			.appendField("set servo")
 			.appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"]]), "ch")
-			.appendField(Blockly.Msg.IKB_1.DIRECTION)
-			.appendField(new Blockly.FieldDropdown([[Blockly.Msg.IKB_1.FORWARD,"1"], [Blockly.Msg.IKB_1.BACKWARD,"2"]]), "dir");
+			.appendField("direction")
+			.appendField(new Blockly.FieldDropdown([["Forward","1"], ["Backward", "2"]]), "dir");
 		this.appendValueInput("speed")
 			.setCheck("Number")
-			.appendField(Blockly.Msg.IKB_1.SPEED);
+			.appendField("speed");
 		this.appendDummyInput()
 			.appendField("%");
 		this.setInputsInline(true);
@@ -94,21 +107,21 @@ Blockly.Blocks['ikb1_servo2'] = {
 		this.setNextStatement(true, null);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_serial_config'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SERIAL_SET_BAUD)
+			.appendField("serial set baud rate to")
 			.appendField(new Blockly.FieldDropdown([["9600","9600"], ["2400","2400"], ["57600","57600"], ["115200","115200"]]), "baud");
 		this.setInputsInline(true);
 		this.setPreviousStatement(true, null);
 		this.setNextStatement(true, null);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
@@ -116,13 +129,13 @@ Blockly.Blocks['ikb1_serial_write'] = {
 	init: function() {
 		this.appendValueInput("data")
 			.setCheck(["String", "Number", "Boolean"])
-			.appendField(Blockly.Msg.IKB_1.SERIAL_WRITE);
+			.appendField("serial write");
 		this.setInputsInline(true);
 		this.setPreviousStatement(true, null);
 		this.setNextStatement(true, null);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
@@ -130,37 +143,37 @@ Blockly.Blocks['ikb1_serial_write_line'] = {
 	init: function() {
 		this.appendValueInput("data")
 			.setCheck(["String", "Number", "Boolean"])
-			.appendField(Blockly.Msg.IKB_1.SERIAL_WRITE_NEW_LINE);
+			.appendField("serial write line");
 		this.setInputsInline(true);
 		this.setPreviousStatement(true, null);
 		this.setNextStatement(true, null);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_serial_available'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SERIAL_AVAILABLE);
+			.appendField("serial available");
 		this.setInputsInline(true);
 		this.setOutput(true, ["Number", "Boolean"]);
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_serial_read_one_byte'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SERIAL_READ_ONE_BYTE);
+			.appendField("serial read one byte");
 		this.setInputsInline(true);
 		this.setOutput(true, "Number");
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
@@ -168,58 +181,58 @@ Blockly.Blocks['ikb1_serial_read'] = {
 	init: function() {
 		this.appendValueInput("count")
 			.setCheck("Number")
-			.appendField(Blockly.Msg.IKB_1.SERIAL_READ);
+			.appendField("serial read");
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.BYTES);
+			.appendField("characters");
 		this.setInputsInline(true);
 		this.setOutput(true, "String");
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_serial_read_string'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SERIAL_READ_STRING);
+			.appendField("serial read string");
 		this.setInputsInline(true);
 		this.setOutput(true, "String");
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_serial_read_line'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SERIAL_READ_LINE);
+			.appendField("serial read line");
 		this.setInputsInline(true);
 		this.setOutput(true, "String");
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
 
 Blockly.Blocks['ikb1_serial_read_until'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField(Blockly.Msg.IKB_1.SERIAL_READ_UNTIL)
+			.appendField("serial read until")
 			.appendField(new Blockly.FieldTextInput("$"), "until");
 		this.setInputsInline(true);
 		this.setOutput(true, "String");
 		this.setColour(180);
 		this.setTooltip("");
-		this.setHelpUrl("https://store.kidbright.info/plugin/7/iKB-1");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 }
 
 Blockly.Blocks['ikb1_motor_forward'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_FORWARD_MESSAGE,
+			"message0": "%1 Move Forward at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -236,8 +249,8 @@ Blockly.Blocks['ikb1_motor_forward'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_FORWARD_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -245,7 +258,7 @@ Blockly.Blocks['ikb1_motor_forward'] = {
 Blockly.Blocks['ikb1_motor_backward'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_BACKWARD_MESSAGE,
+			"message0": "%1 Move Backward at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -262,8 +275,8 @@ Blockly.Blocks['ikb1_motor_backward'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_BACKWARD_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -271,7 +284,7 @@ Blockly.Blocks['ikb1_motor_backward'] = {
 Blockly.Blocks['ikb1_motor_forward2'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_FORWARD_2_MESSAGE,
+			"message0": "%1 Move Forward left wheel at speed %2 %% and right wheel at speed %3 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -292,8 +305,8 @@ Blockly.Blocks['ikb1_motor_forward2'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_FORWARD_2_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -301,7 +314,7 @@ Blockly.Blocks['ikb1_motor_forward2'] = {
 Blockly.Blocks['ikb1_motor_backward2'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_BACKWARD_2_MESSAGE,
+			"message0": "%1 Move Backward left wheel at speed %2 %% and right wheel at speed %3 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -322,8 +335,8 @@ Blockly.Blocks['ikb1_motor_backward2'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_BACKWARD_2_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -331,7 +344,7 @@ Blockly.Blocks['ikb1_motor_backward2'] = {
 Blockly.Blocks['ikb1_motor_turn_left'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_TRUE_LEFT_MESSAGE,
+			"message0": "%1 Turn Left at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -348,8 +361,8 @@ Blockly.Blocks['ikb1_motor_turn_left'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_TRUE_LEFT_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -357,7 +370,7 @@ Blockly.Blocks['ikb1_motor_turn_left'] = {
 Blockly.Blocks['ikb1_motor_turn_right'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_TRUE_RIGHT_MESSAGE,
+			"message0": "%1 Turn Right at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -374,8 +387,8 @@ Blockly.Blocks['ikb1_motor_turn_right'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_TRUE_RIGHT_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -383,7 +396,7 @@ Blockly.Blocks['ikb1_motor_turn_right'] = {
 Blockly.Blocks['ikb1_motor_spin_left'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_SPIN_LEFT_MESSAGE,
+			"message0": "%1 Spin Left at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -400,8 +413,8 @@ Blockly.Blocks['ikb1_motor_spin_left'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_SPIN_LEFT_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -409,7 +422,7 @@ Blockly.Blocks['ikb1_motor_spin_left'] = {
 Blockly.Blocks['ikb1_motor_spin_right'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_SPEN_RIGHT_MESSAGE,
+			"message0": "%1 Spin Right at speed %2 %%",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -426,8 +439,8 @@ Blockly.Blocks['ikb1_motor_spin_right'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_SPEN_RIGHT_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
@@ -435,7 +448,7 @@ Blockly.Blocks['ikb1_motor_spin_right'] = {
 Blockly.Blocks['ikb1_motor_stop'] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.IKB_1_MOTOR_STOP_MESSAGE,
+			"message0": "%1 Stop Moving",
 			"args0": [{
 				"type": "field_image",
 				"src": "https://a.lnwpic.com/4p6j61.png",
@@ -448,8 +461,8 @@ Blockly.Blocks['ikb1_motor_stop'] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 180,
-			"tooltip": Blockly.Msg.IKB_1_MOTOR_STOP_TOOLTIP,
-			"helpUrl": "https://store.kidbright.info/plugin/7/iKB-1"
+			"tooltip": "",
+			"helpUrl": "https://github.com/maxpromer/iKB-1_Arduino"
 		});
 	}
 };
