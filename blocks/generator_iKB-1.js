@@ -30,7 +30,7 @@ Blockly.JavaScript['ikb1_digital_read'] = function(block) {
 
 Blockly.JavaScript['ikb1_digital_write'] = function(block) {
 	var dropdown_ch = block.getFieldValue('ch');
-	var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
+	var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC) || 0;
 	var code = 'ikb.digitalWrite(' + dropdown_ch + ', ' + value_value + ');\n';
 	return code;
 };
@@ -51,7 +51,7 @@ Blockly.JavaScript['ikb1_motor'] = function(block) {
 
 Blockly.JavaScript['ikb1_servo'] = function(block) {
 	var dropdown_ch = block.getFieldValue('ch');
-	var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC);
+	var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC) || 0;
 	var code = 'ikb.servo(' + dropdown_ch + ', ' + value_angle + ');\n';
 	return code;
 };
@@ -59,7 +59,7 @@ Blockly.JavaScript['ikb1_servo'] = function(block) {
 Blockly.JavaScript['ikb1_servo2'] = function(block) {
 	var dropdown_ch = block.getFieldValue('ch');
 	var dropdown_dir = block.getFieldValue('dir');
-	var value_speed = Blockly.JavaScript.valueToCode(block, 'speed', Blockly.JavaScript.ORDER_ATOMIC);
+	var value_speed = Blockly.JavaScript.valueToCode(block, 'speed', Blockly.JavaScript.ORDER_ATOMIC) || 0;
 	var code = 'ikb.servo2(' + dropdown_ch + ', ' + dropdown_dir +', ' + value_speed + ');\n';
 	return code;
 };
@@ -71,13 +71,13 @@ Blockly.JavaScript['ikb1_serial_config'] = function(block) {
 };
 
 Blockly.JavaScript['ikb1_serial_write'] = function(block) {
-	var value_data = Blockly.JavaScript.valueToCode(block, 'data', Blockly.JavaScript.ORDER_ATOMIC);
+	var value_data = Blockly.JavaScript.valueToCode(block, 'data', Blockly.JavaScript.ORDER_ATOMIC) || 0;
 	var code = 'ikb.Serial->print(' + value_data + ');\n';
 	return code;
 };
 
 Blockly.JavaScript['ikb1_serial_write_line'] = function(block) {
-	var value_data = Blockly.JavaScript.valueToCode(block, 'data', Blockly.JavaScript.ORDER_ATOMIC);
+	var value_data = Blockly.JavaScript.valueToCode(block, 'data', Blockly.JavaScript.ORDER_ATOMIC) || '';
 	var code = 'ikb.Serial->println(' + value_data + ');\n';
 	return code;
 };
@@ -106,7 +106,7 @@ Blockly.JavaScript['ikb1_serial_read_string'] = function(block) {
 };
 
 Blockly.JavaScript['ikb1_serial_read_line'] = function(block) {
-	var code = 'ikb.Serial->readStringUntil(\'\n\')';
+	var code = 'ikb.Serial->readStringUntil(\'\\n\')';
 	return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
