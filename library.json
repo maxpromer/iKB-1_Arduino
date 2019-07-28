@@ -5,7 +5,7 @@
   "description": "ไลบารี่สำหรับบอร์ด iKB-1 สำหรับแพลตฟอร์ม Arduino",
   "homepage": "https://www.inex.co.th/",
   "license": "MIT",
-  "git": "https://github.com/maxpromer/ikb-1-ardunio",
+  "git": "https://github.com/maxpromer/iKB-1_Arduino",
   "author": "INEX",
   "email": "tech@inex.co.th",
   "url": "https://www.inex.co.th/",
