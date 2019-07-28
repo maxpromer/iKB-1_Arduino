@@ -5,7 +5,7 @@ Blockly.Blocks['ikb1_setup'] = {
 		this.setInputsInline(true);
 		this.setPreviousStatement(true, null);
 		this.setNextStatement(true, null);
-		this.setColour(165);
+		this.setColour(180);
 		this.setTooltip("setup iKB-1");
 		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
@@ -177,6 +177,7 @@ Blockly.Blocks['ikb1_serial_read_one_byte'] = {
 	}
 };
 
+/*
 Blockly.Blocks['ikb1_serial_read'] = {
 	init: function() {
 		this.appendValueInput("count")
@@ -191,6 +192,7 @@ Blockly.Blocks['ikb1_serial_read'] = {
 		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
 	}
 };
+*/
 
 Blockly.Blocks['ikb1_serial_read_string'] = {
 	init: function() {

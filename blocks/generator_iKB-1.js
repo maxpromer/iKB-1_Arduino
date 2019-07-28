@@ -13,6 +13,7 @@ Blockly.JavaScript['ikb1_setup'] = function(block) {
 
 	var code = '';
 	code += '#EXTINC#include <iKB-1.h>#END\n';
+	code += '#EXTINC#include <iKB-1_UART.h>#END\n';
 	code += '#EXTINC#include <Wire.h>#END\n';
 	code += '#VARIABLE iKB_1 ikb(&' + WIRE_OBJ + ');#END\n';
 	code += '\n';
