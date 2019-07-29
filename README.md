@@ -20,7 +20,7 @@
 | บอร์ด/โปรแกรม | ArduinoIDE | KBIDE |
 | ---- | :--------: | :---: |
 | KidBright32 | :heavy_check_mark: | :heavy_check_mark: |
-| IPST-WiFi | :heavy_check_mark: | :interrobang: |
+| IPST-WiFi | :heavy_check_mark: | :heavy_check_mark: |
 
 ## ตัวอย่างโค้ดโปรแกรม
 
