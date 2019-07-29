@@ -22,6 +22,8 @@
 | KidBright32 | :heavy_check_mark: | :heavy_check_mark: |
 | IPST-WiFi | :heavy_check_mark: | :heavy_check_mark: |
 | Ayarafun/LamLoei Node32 Lite | :heavy_check_mark: | :heavy_check_mark: |
+| Node32 Pico | :heavy_check_mark: | :heavy_check_mark: (เลือกบอร์ด Node32 Lite) |
+| NodeMCU-32S | :heavy_check_mark: | :heavy_check_mark: (เลือกบอร์ด Node32 Lite) |
 
 
 ## ตัวอย่างโค้ดโปรแกรม
