@@ -7,6 +7,10 @@ Blockly.JavaScript['ikb1_setup'] = function(block) {
 		WIRE_OBJ = 'Wire1';
 		SDA_PIN = 4;
 		SCL_PIN = 5;
+	} else if (board_name == 'openkb') {
+		WIRE_OBJ = 'Wire1';
+		SDA_PIN = 4;
+		SCL_PIN = 5;
 	} else if (board_name == 'ipst-wifi') {
 
 	}
