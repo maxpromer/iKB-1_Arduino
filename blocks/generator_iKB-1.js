@@ -3,7 +3,7 @@ Blockly.JavaScript['ikb1_setup'] = function(block) {
 	var SDA_PIN = 21, SCL_PIN = 22; 
 
 	var board_name = Vue.prototype.$global.board.board_info.name;
-	if (board_name == 'kidbright-arduino') {
+	if (board_name == 'kidbright-arduino' || board_name == 'openkb') {
 		WIRE_OBJ = 'Wire1';
 		SDA_PIN = 4;
 		SCL_PIN = 5;
