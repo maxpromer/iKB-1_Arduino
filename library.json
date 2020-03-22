@@ -9,7 +9,7 @@
   "author": "INEX",
   "email": "tech@inex.co.th",
   "url": "https://www.inex.co.th/",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "board" : "",
   "platform": ["arduino-esp32"],
   "image" : "/static/cover.png"
