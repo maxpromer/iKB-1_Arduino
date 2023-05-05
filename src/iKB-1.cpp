@@ -1,9 +1,4 @@
-#ifndef __iKB_1_CPP__
-#define __iKB_1_CPP__
-
 #include "iKB-1.h"
-
-#define IKB_1_ADDR 0x48
 
 iKB_1::iKB_1(TwoWire *bus) { 
     wirebus = bus;
@@ -16,16 +11,20 @@ void iKB_1::begin() {
 	delay(10);
 }
 
+void iKB_1::setAddress(uint8_t addr = 0x48) {
+	this->addr = addr;
+}
+
 // Send only, no parameter, no request
 bool iKB_1::send(uint8_t command) {
-	wirebus->beginTransmission(IKB_1_ADDR);
+	wirebus->beginTransmission(this->addr);
 	wirebus->write(command);
 	return wirebus->endTransmission() == 0;
 }
 
 // Send command and parameter, no request
 bool iKB_1::send(uint8_t command, uint8_t parameter) {
-	wirebus->beginTransmission(IKB_1_ADDR);
+	wirebus->beginTransmission(this->addr);
 	wirebus->write(command);
 	wirebus->write(parameter);
 	return wirebus->endTransmission() == 0;
@@ -33,14 +32,14 @@ bool iKB_1::send(uint8_t command, uint8_t parameter) {
 
 // Send command and parameter and request
 bool iKB_1::send(uint8_t command, uint8_t parameter, int request_length) {
-	wirebus->beginTransmission(IKB_1_ADDR);
+	wirebus->beginTransmission(this->addr);
 	wirebus->write(command);
 	wirebus->write(parameter);
 	if (wirebus->endTransmission() != 0) {
 		return false;
 	}
 
-	wirebus->requestFrom(IKB_1_ADDR, request_length);
+	wirebus->requestFrom(this->addr, request_length);
 	int i=0;
 	while(wirebus->available()) {
 		read_data[i++] = wirebus->read();
@@ -51,13 +50,13 @@ bool iKB_1::send(uint8_t command, uint8_t parameter, int request_length) {
 
 // Send command and request, no parameter 
 bool iKB_1::send(uint8_t command, int request_length) {
-	wirebus->beginTransmission(IKB_1_ADDR);
+	wirebus->beginTransmission(this->addr);
 	wirebus->write(command);
 	if (wirebus->endTransmission() != 0) {
 		return false;
 	}
 
-	wirebus->requestFrom(IKB_1_ADDR, request_length);
+	wirebus->requestFrom(this->addr, request_length);
 	int i=0;
 	while(wirebus->available()) {
 		read_data[i++] = wirebus->read();
@@ -153,5 +152,3 @@ bool iKB_1::servo2(uint8_t ch, uint8_t dir, uint8_t speed) {
 
 	return servo(ch, angle);
 }
-
-#endif

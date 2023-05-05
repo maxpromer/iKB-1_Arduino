@@ -11,6 +11,19 @@ Blockly.Blocks['ikb1_setup'] = {
 	}
 };
 
+Blockly.Blocks['ikb1_select_i2c_address'] = {
+	init: function () {
+		this.appendDummyInput()
+			.appendField("select I2C address")
+			.appendField(new Blockly.FieldDropdown([["0x48", "0x48"], ["0x49", "0x49"]]), "addr");
+		this.setPreviousStatement(true, null);
+		this.setNextStatement(true, null);
+		this.setColour(180);
+		this.setTooltip("");
+		this.setHelpUrl("https://github.com/maxpromer/iKB-1_Arduino");
+	}
+};
+
 Blockly.Blocks['ikb1_digital_read'] = {
 	init: function() {
 		this.appendDummyInput()

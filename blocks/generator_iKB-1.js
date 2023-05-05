@@ -22,6 +22,12 @@ Blockly.JavaScript['ikb1_setup'] = function(block) {
 	return code;
 };
 
+Blockly.JavaScript['ikb1_select_i2c_address'] = function (block) {
+	var dropdown_addr = block.getFieldValue('addr');
+	var code = 'ikb.setAddress(' + dropdown_addr + ');\n';
+	return code;
+};
+
 Blockly.JavaScript['ikb1_digital_read'] = function(block) {
 	var dropdown_ch = block.getFieldValue('ch');
 	var code = 'ikb.digitalRead(' + dropdown_ch + ')';

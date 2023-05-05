@@ -9,6 +9,7 @@
 class iKB_1 {
 	private:		
 		TwoWire *wirebus = 0;
+		uint8_t addr = 0x48;
 
 		uint8_t read_data[3]; // Max 3 bytes
 		uint8_t errCount = 0;
@@ -25,6 +26,7 @@ class iKB_1 {
 
 		// method
 		void begin() ;
+		void setAddress(uint8_t addr = 0x48) ;
 		bool reset() ;
 		uint8_t digitalRead(uint8_t ch, bool pullup = false) ;
 		bool digitalWrite(uint8_t ch, uint8_t value) ;
